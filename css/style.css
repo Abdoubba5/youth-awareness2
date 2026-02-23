@@ -1,191 +1,194 @@
 :root{
-
 --main:#0f766e;
 --secondary:#14b8a6;
 --light:#f4f7fb;
 --dark:#111;
-
 }
 
 body{
-
-font-family:Arial;
 margin:0;
+font-family:Arial;
 background:var(--light);
 color:#333;
-
 }
 
-/* navbar */
+/* Navbar */
 
 .navbar{
-
 background:var(--main);
 color:white;
 position:sticky;
 top:0;
 z-index:1000;
-
 }
 
 .nav-container{
-
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:10px 20px;
-
 }
 
 .logo{
-
 width:50px;
-
 }
 
 nav a{
-
 color:white;
 margin:0 10px;
 text-decoration:none;
-
+font-weight:bold;
 }
 
-/* hero */
+nav a:hover{
+opacity:0.8;
+}
+
+/* Hero */
 
 .hero{
-
 text-align:center;
 padding:100px 20px;
 background:white;
+}
 
+.hero h1{
+font-size:40px;
+color:var(--main);
 }
 
 .btn{
-
 background:var(--main);
 color:white;
 padding:10px 20px;
 border-radius:5px;
 text-decoration:none;
-
 }
 
-/* cards */
+/* Cards */
 
 .cards{
-
 display:flex;
 justify-content:center;
 gap:20px;
 padding:60px;
 flex-wrap:wrap;
-
 }
 
 .card{
-
 background:white;
 padding:25px;
 border-radius:10px;
 width:250px;
 box-shadow:0 5px 20px rgba(0,0,0,0.1);
-
 }
 
-/* stats */
+/* Stats */
 
 .stats{
-
 display:flex;
 justify-content:center;
 gap:50px;
 background:#e6f4f3;
 padding:60px;
-
 }
 
 .counter{
-
 font-size:40px;
 color:var(--main);
-
 }
 
-/* gallery */
+/* Gallery */
 
 .gallery{
-
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:15px;
-
+padding:40px;
 }
 
 .gallery img{
-
 width:100%;
 border-radius:10px;
-
 }
 
-/* form */
+/* Members */
+
+.members{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+padding:50px;
+}
+
+.member-card{
+background:white;
+padding:20px;
+border-radius:10px;
+text-align:center;
+width:220px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.member-card img{
+width:100px;
+border-radius:50%;
+}
+
+/* Form */
 
 .form{
-
 max-width:400px;
 margin:auto;
 display:flex;
 flex-direction:column;
 gap:10px;
-
 }
 
 .form input,
 .form textarea{
-
 padding:10px;
 border:1px solid #ccc;
-
+border-radius:5px;
 }
 
 .form button{
-
 background:var(--main);
 color:white;
 padding:10px;
 border:none;
-
 }
 
-/* animation */
+/* Animation */
 
 .fade{
-
 opacity:0;
 transform:translateY(30px);
 transition:1s;
-
 }
 
 .fade.show{
-
 opacity:1;
 transform:translateY(0);
-
 }
 
-/* dark mode */
+/* Dark Mode */
 
 .dark{
-
 background:#111;
 color:white;
-
 }
 
 .dark .card{
-
 background:#1e1e1e;
+}
 
+/* Footer */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
 }
