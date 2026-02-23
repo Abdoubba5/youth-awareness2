@@ -1,30 +1,45 @@
+:root{
+
+--main:#0f766e;
+--secondary:#14b8a6;
+--light:#f4f7fb;
+--dark:#111;
+
+}
+
 body{
 
 font-family:Arial;
 margin:0;
-background:#f4f7fb;
+background:var(--light);
 color:#333;
 
 }
 
-.header{
+/* navbar */
 
+.navbar{
+
+background:var(--main);
+color:white;
 position:sticky;
 top:0;
-background:#0f766e;
-color:white;
-padding:15px;
 z-index:1000;
 
 }
 
-.container{
+.nav-container{
 
 display:flex;
 justify-content:space-between;
 align-items:center;
-width:90%;
-margin:auto;
+padding:10px 20px;
+
+}
+
+.logo{
+
+width:50px;
 
 }
 
@@ -36,6 +51,8 @@ text-decoration:none;
 
 }
 
+/* hero */
+
 .hero{
 
 text-align:center;
@@ -44,35 +61,24 @@ background:white;
 
 }
 
-.hero h2{
-
-font-size:40px;
-color:#0f766e;
-
-}
-
 .btn{
 
-background:#0f766e;
+background:var(--main);
 color:white;
-padding:12px 25px;
+padding:10px 20px;
 border-radius:5px;
 text-decoration:none;
 
 }
 
-.section{
-
-padding:60px;
-text-align:center;
-
-}
+/* cards */
 
 .cards{
 
 display:flex;
-gap:20px;
 justify-content:center;
+gap:20px;
+padding:60px;
 flex-wrap:wrap;
 
 }
@@ -87,6 +93,8 @@ box-shadow:0 5px 20px rgba(0,0,0,0.1);
 
 }
 
+/* stats */
+
 .stats{
 
 display:flex;
@@ -100,16 +108,17 @@ padding:60px;
 .counter{
 
 font-size:40px;
-color:#0f766e;
+color:var(--main);
 
 }
+
+/* gallery */
 
 .gallery{
 
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
 gap:15px;
-padding:40px;
 
 }
 
@@ -119,6 +128,8 @@ width:100%;
 border-radius:10px;
 
 }
+
+/* form */
 
 .form{
 
@@ -135,18 +146,19 @@ gap:10px;
 
 padding:10px;
 border:1px solid #ccc;
-border-radius:5px;
 
 }
 
 .form button{
 
-background:#0f766e;
+background:var(--main);
 color:white;
 padding:10px;
 border:none;
 
 }
+
+/* animation */
 
 .fade{
 
@@ -163,24 +175,17 @@ transform:translateY(0);
 
 }
 
-footer{
+/* dark mode */
+
+.dark{
 
 background:#111;
 color:white;
-text-align:center;
-padding:20px;
 
 }
 
-@media(max-width:768px){
+.dark .card{
 
-.cards{
-flex-direction:column;
-align-items:center;
-}
-
-.stats{
-flex-direction:column;
-}
+background:#1e1e1e;
 
 }
