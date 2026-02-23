@@ -1,33 +1,31 @@
-/* Counter Animation */
+const counters = document.querySelectorAll(".counter");
 
-const counters = document.querySelectorAll(".counter")
+counters.forEach(counter => {
 
-counters.forEach(counter=>{
+counter.innerText = "0";
 
-counter.innerText="0"
+const update = () => {
 
-const update=()=>{
+const target = +counter.getAttribute("data-target");
 
-const target = +counter.getAttribute("data-target")
+const value = +counter.innerText;
 
-const value = +counter.innerText
-
-const increment = target / 100
+const increment = target / 100;
 
 if(value < target){
 
-counter.innerText = Math.ceil(value + increment)
+counter.innerText = Math.ceil(value + increment);
 
-setTimeout(update,30)
+setTimeout(update,30);
 
 }else{
 
-counter.innerText = target
+counter.innerText = target;
 
 }
 
-}
+};
 
-update()
+update();
 
-})
+});
