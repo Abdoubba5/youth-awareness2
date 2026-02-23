@@ -1,16 +1,28 @@
+/* dark mode */
+
+const btn = document.getElementById("darkToggle");
+
+btn.onclick = ()=>{
+
+document.body.classList.toggle("dark");
+
+};
+
+/* counter */
+
 const counters = document.querySelectorAll(".counter");
 
-counters.forEach(counter => {
+counters.forEach(counter=>{
 
-counter.innerText = "0";
+counter.innerText="0";
 
-const update = () => {
+const update=()=>{
 
 const target = +counter.getAttribute("data-target");
 
 const value = +counter.innerText;
 
-const increment = target / 100;
+const increment = target/100;
 
 if(value < target){
 
@@ -30,6 +42,7 @@ update();
 
 });
 
+/* animation */
 
 const faders = document.querySelectorAll(".fade");
 
