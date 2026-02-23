@@ -1,11 +1,255 @@
-.contact-box{
+/* =========================
+General
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:Arial, Helvetica, sans-serif;
+background:#f5f7fa;
+color:#333;
+line-height:1.6;
+
+}
+
+.container{
+
+max-width:1200px;
+margin:auto;
+padding:20px;
+
+}
+
+
+/* =========================
+Navbar
+========================= */
+
+.navbar{
+
+background:#0f766e;
+color:white;
+position:sticky;
+top:0;
+z-index:1000;
+
+}
+
+.nav-container{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+max-width:1200px;
+margin:auto;
+padding:15px;
+
+}
+
+.logo{
+
+width:45px;
+
+}
+
+nav a{
+
+color:white;
+text-decoration:none;
+margin:0 10px;
+font-weight:bold;
+
+}
+
+nav a:hover{
+
+opacity:0.8;
+
+}
+
+
+/* =========================
+Hero
+========================= */
+
+.hero{
+
+text-align:center;
+padding:80px 20px;
+
+}
+
+.hero h1{
+
+font-size:40px;
+margin-bottom:10px;
+color:#0f766e;
+
+}
+
+.hero p{
+
+font-size:18px;
+color:#555;
+
+}
+
+.btn{
+
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#0f766e;
+color:white;
+border-radius:5px;
+text-decoration:none;
+
+}
+
+
+/* =========================
+Cards
+========================= */
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1100px;
+margin:auto;
+padding:50px 20px;
+
+}
+
+.card{
+
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
+
+}
+
+
+/* =========================
+Stats
+========================= */
+
+.stats{
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:40px;
+background:#e6f4f3;
+padding:60px;
+
+}
+
+.stat{
+
+text-align:center;
+
+}
+
+.counter{
+
+font-size:40px;
+color:#0f766e;
+font-weight:bold;
+
+}
+
+
+/* =========================
+Members
+========================= */
+
+.members{
+
+padding:60px 20px;
+text-align:center;
+
+}
+
+.members-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+max-width:1100px;
+margin:auto;
+
+}
+
+.member-card{
+
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+
+/* =========================
+Leader
+========================= */
+
+.leader{
 
 text-align:center;
 padding:40px;
 
 }
 
-.social{
+.leader-card{
+
+background:white;
+padding:30px;
+border-radius:10px;
+width:260px;
+margin:auto;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+}
+
+
+/* =========================
+Gallery
+========================= */
+
+.gallery{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:15px;
+max-width:1100px;
+margin:auto;
+padding:50px;
+
+}
+
+.gallery img{
+
+width:100%;
+border-radius:10px;
+
+}
+
+
+/* =========================
+Contact
+========================= */
+
+.contact-box{
 
 text-align:center;
 padding:40px;
@@ -31,11 +275,46 @@ text-decoration:none;
 
 }
 
-.social-btn:hover{
 
-opacity:0.8;
+/* =========================
+Footer
+========================= */
+
+footer{
+
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
 
 }
+
+
+/* =========================
+Animations
+========================= */
+
+.fade{
+
+opacity:0;
+transform:translateY(30px);
+transition:1s;
+
+}
+
+.fade.show{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+
+/* =========================
+Dark Mode
+========================= */
+
 .dark{
 
 background:#121212;
@@ -43,7 +322,9 @@ color:white;
 
 }
 
-.dark .card{
+.dark .card,
+.dark .member-card,
+.dark .leader-card{
 
 background:#1e1e1e;
 
@@ -51,6 +332,33 @@ background:#1e1e1e;
 
 .dark .navbar{
 
-background:#0a4d4a;
+background:#083a38;
+
+}
+
+.dark footer{
+
+background:#000;
+
+}
+
+
+/* =========================
+Responsive
+========================= */
+
+@media(max-width:768px){
+
+nav{
+
+display:none;
+
+}
+
+.hero h1{
+
+font-size:28px;
+
+}
 
 }
