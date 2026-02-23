@@ -36,3 +36,21 @@ text-decoration:none;
 opacity:0.8;
 
 }
+.dark{
+
+background:#121212;
+color:white;
+
+}
+
+.dark .card{
+
+background:#1e1e1e;
+
+}
+
+.dark .navbar{
+
+background:#0a4d4a;
+
+}
