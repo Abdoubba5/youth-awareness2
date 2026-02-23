@@ -1,28 +1,22 @@
-/* =========================
-   Dark Mode (احترافي)
-========================= */
+/* =====================
+Dark Mode
+===================== */
 
-const darkBtn = document.getElementById("darkToggle")
+const darkBtn = document.getElementById("darkToggle");
 
-if(darkBtn){
+if (darkBtn) {
 
 darkBtn.addEventListener("click", () => {
 
-document.body.classList.toggle("dark")
-
-/* حفظ الوضع */
+document.body.classList.toggle("dark");
 
 if(document.body.classList.contains("dark")){
-
-localStorage.setItem("theme","dark")
-
+localStorage.setItem("theme","dark");
 }else{
-
-localStorage.setItem("theme","light")
-
+localStorage.setItem("theme","light");
 }
 
-})
+});
 
 }
 
@@ -30,126 +24,70 @@ localStorage.setItem("theme","light")
 
 window.addEventListener("load", () => {
 
-const theme = localStorage.getItem("theme")
+const theme = localStorage.getItem("theme");
 
 if(theme === "dark"){
-
-document.body.classList.add("dark")
-
+document.body.classList.add("dark");
 }
 
-})
+});
 
 
-/* =========================
-   Counter Animation
-========================= */
+/* =====================
+Counter Animation
+===================== */
 
-const counters = document.querySelectorAll(".counter")
+const counters = document.querySelectorAll(".counter");
 
 counters.forEach(counter => {
 
-counter.innerText = "0"
+counter.innerText = "0";
 
 const updateCounter = () => {
 
-const target = +counter.getAttribute("data-target")
-const value = +counter.innerText
-const increment = target / 120
+const target = +counter.getAttribute("data-target");
+
+const value = +counter.innerText;
+
+const increment = target / 100;
 
 if(value < target){
 
-counter.innerText = Math.ceil(value + increment)
-setTimeout(updateCounter, 20)
+counter.innerText = Math.ceil(value + increment);
+
+setTimeout(updateCounter, 25);
 
 }else{
 
-counter.innerText = target
+counter.innerText = target;
 
 }
 
-}
+};
 
-updateCounter()
+updateCounter();
 
-})
-
-
-/* =========================
-   Scroll Animation
-========================= */
-
-const faders = document.querySelectorAll(".fade")
-
-const appearOptions = {
-
-threshold:0.2
-
-}
-
-const appearOnScroll = new IntersectionObserver(function(entries){
-
-entries.forEach(entry => {
-
-if(!entry.isIntersecting){
-
-return
-
-}else{
-
-entry.target.classList.add("show")
-
-}
-
-})
-
-}, appearOptions)
+});
 
 
-faders.forEach(fader => {
-
-appearOnScroll.observe(fader)
-
-})
-
-
-/* =========================
-   Smooth Scroll
-========================= */
-
-document.querySelectorAll("a[href^='#']").forEach(anchor => {
-
-anchor.addEventListener("click", function(e){
-
-e.preventDefault()
-
-document.querySelector(this.getAttribute("href")).scrollIntoView({
-
-behavior:"smooth"
-
-})
-
-})
-
-})
-
-
-/* =========================
-   Navbar Shadow on Scroll
-========================= */
+/* =====================
+Navbar Shadow
+===================== */
 
 window.addEventListener("scroll", () => {
 
-const navbar = document.querySelector(".navbar")
+const navbar = document.querySelector(".navbar");
+
+if(!navbar) return;
 
 if(window.scrollY > 50){
 
-navbar.style.boxShadow = "0 5px 20px rgba(0,0,0,0.2)"
+navbar.style.boxShadow = "0 4px 15px rgba(0,0,0,0.2)";
 
 }else{
 
-navbar.style.boxShadow = "none"
+navbar.style.boxShadow = "none";
 
 }
 
-})
+});
